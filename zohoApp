@@ -1,0 +1,19 @@
+public class ZohoApp {
+
+    public void printValues(String value){
+        String result = "";
+        for(int i = value.length()/2;i<value.length();i++){
+            result+=value.charAt(i);
+            System.out.println(result);
+        }
+        for(int j = 0;j<value.length()/2;j++){
+            result+=value.charAt(j);
+            System.out.println(result);
+        }
+    }
+
+    public static void main(String args[]){
+        ZohoApp zohoApp = new ZohoApp();
+        zohoApp.printValues("WELCOME");
+    }
+}
