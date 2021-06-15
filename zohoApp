@@ -2,18 +2,20 @@ public class ZohoApp {
 
     public void printValues(String value){
         String result = "";
-        for(int i = value.length()/2;i<value.length();i++){
+        Integer middleIndex = value.length()/2;
+        Integer length = value.length();
+        for(int i = middleIndex;i<length;i++){
             result+=value.charAt(i);
             System.out.println(result);
-        }
-        for(int j = 0;j<value.length()/2;j++){
-            result+=value.charAt(j);
-            System.out.println(result);
+            if(i == value.length()-1){
+                i = -1;
+                length = length/2;
+            }
         }
     }
 
     public static void main(String args[]){
         ZohoApp zohoApp = new ZohoApp();
-        zohoApp.printValues("WELCOME");
+        zohoApp.printValues("WATER");
     }
 }
